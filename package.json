@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
+    "build:prisma": "prisma generate && yarn rebuild:be",
     "db:console": "docker compose exec postgres psql -h localhost -U postgres -d webapp_dev",
     "db:migrate": "knex migrate:latest",
     "docker:db:migrate": "docker compose run backend yarn db:migrate",

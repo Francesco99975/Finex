@@ -10,14 +10,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id          String    @id
-  slug        String    @unique
-  title       String
-  content     String?
-  publishedAt DateTime?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+model Etf {
+  symbol            String    @id
+  name              String    @unique
+  price             Float
+  price_change      Float
+  prev_close        Float
+  open_price        Float
+  percentage_change String
+  bid               Float
+  bid_size          Int
+  ask               Float
+  ask_size          Int
+  days_range        String
+  weeks_range       String
+  volume            Int
+  avg_volume        Int
+  net_assets        String
+  nav               Float
+  pe_ratio          String
+  dividend_yield    String
+  ytd_return        String
+  beta              Float
+  expense_ratio     String
+  inception_date    DateTime
 
-  @@map("posts")
+  @@map("etfs")
 }
