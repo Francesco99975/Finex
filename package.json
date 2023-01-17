@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "volta": {
-    "node": "17.3.0"
+    "node": "18.13.0"
   },
   "scripts": {
     "build": "rimraf dist && swc ./src -d dist",
@@ -16,11 +16,11 @@
     "start:docker": "yarn build && node --inspect=0.0.0.0 dist/index.js"
   },
   "dependencies": {
-    "@prisma/client": "3.7.0",
+    "@prisma/client": "4.8.1",
     "express": "^4.17.2",
-    "knex": "^0.95.15",
+    "knex": "^2.4.0",
     "morgan": "^1.10.0",
-    "nanoid": "^3.1.30",
+    "nanoid": "^4.0.0",
     "pg": "^8.7.1",
     "typescript": "^4.5.4"
   },
@@ -30,12 +30,12 @@
     "@tsconfig/node16": "^1.0.2",
     "@types/express": "^4.17.13",
     "@types/morgan": "^1.9.3",
-    "@types/node": "^17.0.8",
+    "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "eslint": "^8.6.0",
-    "prisma": "^3.7.0",
-    "rimraf": "^3.0.2",
+    "prisma": "^4.8.1",
+    "rimraf": "^4.1.0",
     "ts-node": "^10.4.0"
   }
 }
