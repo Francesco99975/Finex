@@ -37,3 +37,32 @@ model Etf {
 
   @@map("etfs")
 }
+
+model Reit {
+  symbol            String    @id
+  name              String    @unique
+  price             Float
+  price_change      Float
+  prev_close        Float
+  open_price        Float
+  percentage_change String
+  bid               Float?     
+  bid_size          Int?
+  ask               Float?
+  ask_size          Int?
+  days_range        String?
+  weeks_range       String?
+  volume            Int?
+  avg_volume        Int?
+  market_cap        String?
+  pe_ratio          String?
+  eps               String?
+  earnings_date      DateTime?
+  fordward_dividend Float?
+  dividend_yield    String?
+  beta              Float?
+  ex_dividend_date  DateTime?
+  year_target       Float?
+
+  @@map("reits")
+}

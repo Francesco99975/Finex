@@ -11,6 +11,12 @@ const resolvers = {
     etf: (_: undefined, { sym }: { sym: string }) => {
       return db.etf.findFirst({ where: { symbol: sym } });
     },
+    reits: () => {
+      return db.reit.findMany();
+    },
+    reit: (_: undefined, { sym }: { sym: string }) => {
+      return db.reit.findFirst({ where: { symbol: sym } });
+    },
     dividendEtfs: () => {
       return db.etf.findMany({
         where: { dividend_yield: { not: 'N/A' } },
